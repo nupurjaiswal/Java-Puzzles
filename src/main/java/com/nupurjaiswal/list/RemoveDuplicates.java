@@ -1,5 +1,7 @@
 package com.nupurjaiswal.list;
-//Write a code to remove duplicates from an unsorted linked list
+/*
+Write a code to remove duplicates from an unsorted linked list
+ */
 
 
 import java.util.HashSet;
