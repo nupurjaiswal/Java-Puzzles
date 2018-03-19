@@ -1,5 +1,7 @@
 package com.nupurjaiswal.arraystring;
-
+/*
+Implement an algorithm to determine if a string has all unique characters
+ */
 import java.util.HashSet;
 
 public class UniqueString {

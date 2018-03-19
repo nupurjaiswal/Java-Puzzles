@@ -1,5 +1,7 @@
 package com.nupurjaiswal.arraystring;
-
+/*
+Find the largest number in a list of integer
+ */
 public class LargestNumInArray {
 
     public static void main(String[] args) {

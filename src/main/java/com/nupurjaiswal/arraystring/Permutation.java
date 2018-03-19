@@ -1,7 +1,9 @@
 package com.nupurjaiswal.arraystring;
 
 import java.util.HashSet;
-
+/*
+Given two string write a method to decide if one string is permutation of the other
+ */
 public class Permutation {
 
     public static void main(String[] args) {

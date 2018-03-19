@@ -1,5 +1,7 @@
 package com.nupurjaiswal.arraystring;
-
+/*
+Write a method to replace all spaces in a string with "%20". You are given the true length of the string
+ */
 public class URLify {
 
 
