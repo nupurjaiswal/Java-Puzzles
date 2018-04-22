@@ -13,7 +13,7 @@ public class Token {
 
         String s = "He is a very very good boy, isn't he?";
         // Write your code here.
-        String[] inputArray = s.split("[\\s!,?._'@]+");
+        String[] inputArray = s.replaceFirst("^\\W+", "").split("[\\s!,?._'@]+");
         System.out.println(inputArray.length);
         for(int i = 0; i < inputArray.length; i ++){
             System.out.println(inputArray[i]);
