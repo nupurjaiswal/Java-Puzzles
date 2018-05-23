@@ -1,4 +1,4 @@
-package com.nupurjaiswal.datastructure;
+package com.nupurjaiswal.arraystring;
 
 import java.util.Scanner;
 
