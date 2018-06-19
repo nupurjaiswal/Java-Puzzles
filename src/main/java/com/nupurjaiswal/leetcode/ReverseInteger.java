@@ -4,26 +4,42 @@ public class ReverseInteger {
 
 
     public static void main(String[] args) {
-        System.out.println(reverse(123));
+
+        System.out.println(reverse(9646324351L));
+
 
     }
 
-    public static int reverse(int x) {
-        String inputString = Integer.toString(x);
-        String output = "";
+    public static long reverse(long x) {
 
+        boolean flag = true;
 
+        String xStr = "" + x;
+        StringBuilder answer = new StringBuilder();
 
-        char[] array = inputString.toCharArray();
+        if (xStr.contains("-")){
+            flag = false;
+        }
 
-        for(int i = 2 ;i < 0; i --){
-            System.out.println(array[i]);
-            output += array[i];
-            System.out.println(output);
+        char[] resultCharArray;
+
+        if(!flag){
+            resultCharArray = xStr.substring(1).toCharArray();
+        }else{
+            resultCharArray = xStr.toCharArray();
+        }
+
+        for(int i = resultCharArray.length - 1; i >= 0; i--){
+            answer.append(resultCharArray[i]);
+        }
+
+        if(!flag){
+            return Long.parseLong("-" + answer.toString());
+        }else{
+            return Long.parseLong(answer.toString());
         }
 
 
-        return 1;
 
     }
 }
