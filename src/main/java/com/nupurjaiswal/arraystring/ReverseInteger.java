@@ -9,12 +9,10 @@ public class ReverseInteger {
         int number = 123;
         int tmp = number;
 
-        while(number>0){
-            r = number%10;
-            sum = (sum*10)+r;
-            number = number/10;
-
-
+        while (number > 0) {
+            r = number % 10;
+            sum = (sum * 10) + r;
+            number = number / 10;
 
 
         }
@@ -23,15 +21,7 @@ public class ReverseInteger {
         System.out.println(sum);
 
 
-
-
     }
-
-
-
-
-
-
 
 
 }
