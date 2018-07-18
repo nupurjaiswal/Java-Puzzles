@@ -9,13 +9,13 @@ public class Factorial {
     }
 
 
-    public static int factorial(int n){
+    public static int factorial(int n) {
 
         int result = 1;
 
-        while(n > 0){
+        while (n > 0) {
 
-            result = result*n;
+            result = result * n;
             n--;
 
         }
@@ -25,8 +25,8 @@ public class Factorial {
     }
 
 
-    public static int fact(int n){
-        return n * fact(n-1);
+    public static int fact(int n) {
+        return n * fact(n - 1);
 
 
     }

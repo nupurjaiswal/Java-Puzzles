@@ -5,8 +5,6 @@ public class RemoveDuplicateFromSortedArray {
     // simple java program to remove
 // duplicates
 
-
-
         // Function to remove duplicate elements
         // This function returns new size of modified
         // array.
@@ -53,7 +51,3 @@ public class RemoveDuplicateFromSortedArray {
                 System.out.print(arr[i]+" ");
         }
     }
-
-
-
-

@@ -1,6 +1,8 @@
 package com.nupurjaiswal.arraystring;
 
-import java.util.HashSet;
+import java.util.Arrays;
+import java.util.HashMap;
+
 /*
 Given two string write a method to decide if one string is permutation of the other
  */
@@ -10,46 +12,60 @@ public class Permutation {
 
         String input1 = "runup";
         String input2 = "nupur";
-        System.out.println(checkIfStringIsPermutation(input1, input2));
+        System.out.println(checkPermutation(input1,input2));
+       System.out.println(checkStringPermutation(input1,input2));
     }
 
-    public static boolean checkIfStringIsPermutation(String inputString1, String inputString2) {
+
+    //Sort the two strings's characters.
+    //Compare the results to see if they're identical
 
 
-        HashSet<Character> input1HashSet = new HashSet<Character>();
-        HashSet<Character> input2HashSet = new HashSet<Character>();
+   public static boolean checkPermutation(String inputString1, String inputString2){
 
-        if (inputString1.length() == inputString2.length()) {
-            for (char a : inputString1.toCharArray()) {
+        char[] array1 = inputString1.toCharArray();
+        char[] array2 = inputString2.toCharArray();
 
-                input1HashSet.add(a);
+       Arrays.sort(array1);
+       Arrays.sort(array2);
 
-            }
+       return Arrays.equals(array1,array2);
 
-            for (char b : inputString2.toCharArray()) {
-
-                input2HashSet.add(b);
-            }
-
-            if (input1HashSet.size() == input2HashSet.size()) {
-                for (char b : inputString2.toCharArray()) {
-
-                    if (!input1HashSet.contains(b)) {
-
-                        return false;
-                    }
-
-                }
-                return true;
-            } else {
-                return false;
-            }
+    }
 
 
-        } else {
+     public static boolean checkStringPermutation(String inputString1, String inputString2){
+
+        if(inputString1.length() != inputString2.length()){
             return false;
         }
 
+         HashMap<Character,Integer> hashMap = new HashMap<Character, Integer>();
+        int count = 1;
+        for(char c: inputString1.toCharArray()){
+
+            if(!hashMap.containsKey(c)){
+                hashMap.put(c,count);
+            }else
+            {
+                hashMap.put(c,count+1);
+            }
+        }
+
+        for (char c: inputString2.toCharArray()){
+            if (!hashMap.containsKey(c)){
+                return false;
+            }else {
+                hashMap.put(c,count-1);
+            }
+        }
+         for(char c: hashMap.keySet())
+         {
+             if(hashMap.get(c)!=0)
+                 return false;
+         }
+         return true;
+
+     }
 
     }
-}
