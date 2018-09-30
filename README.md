@@ -7,11 +7,11 @@ The java package structure is as follows:
 com.nupurjaiswal
 
 - arraystring
- 1. LargestNumInArray: `Find the largest number in a list of integer`
- 2. OneDArray: `Prints each sequential element in an array` 
- 3. Permutation: `Given two string write a method to decide if one string is permutation of the other`
- 4. UniqueString: `Implement an algorithm to determine if a string has all unique characters`
- 5. URLify: `Write a method to replace all spaces in a string with "%20". You are given the true length of the string`
+ 1. LargestNumInArray: Find the largest number in a list of integer
+ 2. OneDArray: Prints each sequential element in an array 
+ 3. Permutation: Given two string write a method to decide if one string is permutation of the other
+ 4. UniqueString: Implement an algorithm to determine if a string has all unique characters
+ 5. URLify: Write a method to replace all spaces in a string with "%20". You are given the true length of the string
  
  - datastructure
 
